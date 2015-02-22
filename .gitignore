@@ -1,0 +1,12 @@
+!.gitignore
+
+/nbproject
+config.codekit
+config.codekit
+app.zip
+*-ck.js
+
+#ignores for grunt
+node_modules
+.npm-debug.log
+tmp

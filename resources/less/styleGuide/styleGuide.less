@@ -1,0 +1,145 @@
+@import '../themes/styles.less';
+
+@StyleGuideBg: #f5f5f1;
+
+body {
+    background-color: white;
+}
+
+.chapter {
+    margin-bottom: @Margin*2;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    float: left;
+}
+.chapterHeadline {
+    width: 100%;
+    padding-bottom: @Padding/2;
+    margin-bottom: @Margin*2;
+    float: left;
+    display: inline-block;
+}
+
+
+.content {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    float: left;
+    margin-bottom: @Margin;
+}
+.colorBox {
+    padding: @Padding*2;
+    color: white;
+    margin-bottom: @Margin;
+}
+.staticNavigation .area {
+    margin-bottom: @Margin;
+    background-color: transparent;
+    h2 {
+        background-color: white;
+        padding-left: @Padding;
+        padding-right: @Padding;
+        padding-top: @Padding/2;
+        padding-bottom: @Padding/2;
+        border: 1px solid @Color3;
+        float: left;
+        width: 100%;
+        margin-bottom: 0px;
+    }
+    .navigationContent {
+        padding: @Padding;
+        background-color: @StyleGuideBg;
+        border-left: 1px solid @Color3;
+        border-right: 1px solid @Color3;
+        border-bottom: 1px solid @Color3;
+        float: left;
+        width: 100%;
+        a {
+            text-decoration: none;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+.backgroundColor1 {
+    background-color: @Color1;
+}
+.backgroundColor2 {
+    background-color: @Color2;
+}
+.backgroundColor3 {
+    background-color: @Color3;
+}
+.backgroundColor4 {
+    background-color: @Color4;
+}
+.backgroundColor5 {
+    background-color: @Color5;
+}
+.backgroundColor6 {
+    background-color: @Color6;
+}
+.backgroundColor8 {
+    background-color: @Color8;
+}
+.backgroundColor9 {
+    background-color: @Color9;
+}
+
+.h5, h5 {
+    &.chapterHeadline {
+        //border-bottom: 1px solid @Color3;
+        color: @Color2;
+        font-size: 1.6rem;
+    } 
+}
+
+.h4, h4 {
+    &.chapterHeadline {
+        //border-bottom: 1px solid @Color3;
+        color: @Color1;
+        margin-bottom: @Margin;
+        margin-top: @Margin;
+        font-size: 2.0rem;
+    }
+}
+
+.h3, h3 {
+    &.chapterHeadline {
+        border-bottom: 1px solid @Color3;
+        font-size: 2.4rem;
+        //color: @Color1;
+        margin-bottom: @Margin*1.5;
+        margin-top: @Margin*1.5;
+    }
+}
+
+.h1, h1 {
+    &.chapterHeadline {
+        //border-bottom: 1px solid @Color3;
+        font-size: 3.2rem;
+        //color: @Color1;
+        margin-bottom: @Margin;
+        margin-top: @Margin*2;
+    }
+}
+
+.styleguideDescription {
+    margin-bottom: @Margin*2;
+}
+
+.fullBg {
+    background-color: @StyleGuideBg;
+    margin-bottom: @Margin*2;
+    border-bottom: 1px solid @Color3;
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+.footerContent {
+    padding-top: @Padding;
+    padding-bottom: @Padding;
+}

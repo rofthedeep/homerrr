@@ -1,0 +1,155 @@
+.hasDropdown {
+    position: relative;
+    float: left;
+    display: block;
+    &.hasDropdownRight {
+        float: right;
+    }
+}
+.hasDropdown:hover .dropdown-flyout {
+    display: block;
+}
+
+.dropdown-content {
+    //font-size: @FontSizeSmall;
+    ul {
+        margin-bottom: 0px;
+    }
+    &.skin_noStlye {
+        text-align: left;
+        li {
+            width: auto;
+        }
+    }
+}
+
+.dropdown-flyout {
+    position: absolute;
+    left: 0;
+    z-index: @zindex-popover;
+    display: none;
+    padding-top: 8px;
+    text-align: left; // Reset given new insertion method
+    // Overrides for proper insertion
+    white-space: normal;
+    > .inner {
+        background-color: @popover-bg;
+        background-clip: padding-box;
+        border: 1px solid @popover-fallback-border-color;
+        border: 1px solid @popover-border-color;
+        //border-radius: @border-radius-large;
+        .box-shadow(0px 0px 3px rgba(0,0,0,.2));
+        padding: 10px 10px;
+    }
+    .navArrow:after, .navArrow:before {
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+    }
+    .navArrow:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-bottom-color: #ffffff;
+        border-width: 7px;
+        margin-left: -7px;
+
+    }
+    .navArrow:before {
+        border-color: rgba(204, 204, 204, 0);
+        border-bottom-color: #cccccc;
+        border-width: 8px;
+        margin-left: -8px;
+    }
+}
+&.skin_withListStyle {
+    li {
+        padding-left: 10px;
+        background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAICAgICAgICAgIDAgICAwQDAgIDBAUEBAQEBAUGBQUFBQUFBgYHBwgHBwYJCQoKCQkMDAwMDAwMDAwMDAwMDAz/2wBDAQMDAwUEBQkGBgkNCwkLDQ8ODg4ODw8MDAwMDA8PDAwMDAwMDwwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAAEAAQDAREAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAACv/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AP+D/2Q==);
+        background-repeat: no-repeat;
+        background-position: left 8px;
+        float: left;            
+    }
+}
+
+.hasDropdown {
+    &.fixedWidthAndCentered {
+        .dropdown-flyout  {
+            left: 50%;
+            margin-left: -100px;
+            width: 200px;
+            &.skin_widthWider {
+                width: 230px;
+                margin-left: -115px;
+            }
+            &.skin_widthLarge {
+                width: 350px;
+                margin-left: -175px;
+            }
+            .navArrow {
+                left: 0px;
+                background-position: center bottom;
+            }
+            .inner {
+                width: 100%;
+                display: inline-block;
+                ul {
+                    width: 100%;
+                    li {
+                        width: 100%;
+                        display: inline-block;
+                        padding-top: 2px;
+                        padding-bottom: 2px;
+                        white-space: normal;
+                        a {
+                            margin-bottom: 5px;
+                            width: 100%;
+                            display: inline-block;
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.hasDropdown {
+    &.dropdownRight {   
+        .dropdown-flyout  {
+            left: auto;
+            right: 0px;
+            .inner {
+                width: 180px;
+            }
+            .navArrow:after, .navArrow:before {
+                bottom: 100%;
+                left: auto;
+                right: 10%;
+                border: solid transparent;
+                content: " ";
+                height: 0;
+                width: 0;
+                position: absolute;
+                pointer-events: none;
+            }
+            .navArrow:after {
+                border-color: rgba(255, 255, 255, 0);
+                border-bottom-color: #ffffff;
+                border-width: 7px;
+                margin-left: -7px;
+
+            }
+            .navArrow:before {
+                border-color: rgba(204, 204, 204, 0);
+                border-bottom-color: #cccccc;
+                border-width: 8px;
+                margin-left: -8px;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,10 @@
+body {
+    background: none;
+    color: black;
+}
+.wrapper, .modBreadcrumb {
+    display: none;
+}
+.wrapper.wrapperContent {
+    display: inline-block;
+}

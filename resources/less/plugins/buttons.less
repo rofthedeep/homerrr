@@ -1,0 +1,107 @@
+.btn {
+    //border: 1px solid transparent; 
+    //border-radius: 4px;
+    cursor: pointer;
+    display: inline-block; 
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5; 
+    margin-bottom: 0;
+    text-align: center; 
+    vertical-align: middle; 
+    white-space: nowrap;
+    border: 0px none;
+    &:hover {
+        cursor: pointer;
+    }
+
+
+    .buttonGradient() {
+        background: #147ecc; /* Old browsers */
+        background: -moz-linear-gradient(-45deg,  #147ecc 0%, #3d7299 25%, #00ffe3 50%, #ff7a60 75%, #cc1814 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,#147ecc), color-stop(25%,#3d7299), color-stop(50%,#00ffe3), color-stop(75%,#ff7a60), color-stop(100%,#cc1814)); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  #147ecc 0%,#3d7299 25%,#00ffe3 50%,#ff7a60 75%,#cc1814 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  #147ecc 0%,#3d7299 25%,#00ffe3 50%,#ff7a60 75%,#cc1814 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  #147ecc 0%,#3d7299 25%,#00ffe3 50%,#ff7a60 75%,#cc1814 100%); /* IE10+ */
+        background: linear-gradient(135deg,  #147ecc 0%,#3d7299 25%,#00ffe3 50%,#ff7a60 75%,#cc1814 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#147ecc', endColorstr='#cc1814',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    }
+
+
+    &.primary {
+        padding: 6px 12px 4px 12px; 
+        //.Gradient (@Color2, @Color3);
+        //background: @Color1;
+        background-color: @Color1;
+        color: @White;
+        text-decoration: none;
+        border: 2px solid @Color1;
+        font-weight: 700;
+        &:hover {
+            //.buttonGradient;
+            color: @White;
+            background-color: @Black;
+            border-color: @Black;
+            //border-color: @White;
+        }
+    }
+    &.secondary {
+        padding: 6px 12px 4px 12px; 
+        //.Gradient (@Color2, @Color3);
+        //background: @Color1;
+        background-color: @Color2;
+        color: @White;
+        text-decoration: none;
+        border: 2px solid @Color2;
+        font-weight: 700;
+        &:hover {
+            //.buttonGradient;
+            color: @White;
+            background-color: @Black;
+            border-color: @Black;
+            //border-color: @White;        
+        }
+    }
+    &.big {
+        //border-radius: 6px; 
+        //border: 0 none; 
+        font-size: 14px; 
+        line-height: 1.5; 
+        padding: 13px 19px 11px 19px; 
+    }
+
+    &.small {
+        //border-radius: 3px; 
+        //border: 0 none; 
+        font-size: 12px; 
+        line-height: 1.5; 
+        padding: 5px 10px 3px 10px;
+    }
+    &.xsmall {
+        //border-radius: 3px; 
+        //border: 0 none; 
+        font-size: 12px; 
+        line-height: 1.5; 
+        padding: 2px 5px 0px 5px;
+    }
+    &.block {
+        display: block;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    &:disabled {
+        box-shadow: none; 
+        cursor: not-allowed; 
+        opacity: 0.35; 
+        pointer-events: none;
+    }
+    &.conversion {
+        width: 300px;
+    }
+}
+a.button {
+    text-decoration: none;
+}
+
+

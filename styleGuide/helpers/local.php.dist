@@ -1,0 +1,30 @@
+<?php
+/**
+ * 
+ * @param string $path WITH leading '/'
+ * @return string
+ */
+function resourcePath($path = '') {
+    //$basePath = str_replace($_SERVER['DOCUMENT_ROOT'], '',dirname($_SERVER['SCRIPT_FILENAME']));
+
+    //$elements = explode('/', $basePath);
+    //$resourcePath = '';
+
+    //for($i = 0, $iMax = count($elements) - 3; $i <= $iMax; $i++) {
+    //    $resourcePath .= '../';
+    //}
+    //$result = $resourcePath . 'resources/' . ltrim($path, '/');
+    $result = "http://local.pranahaus.de/resources".$path;
+    return $result;
+}
+
+/**
+ * 
+ * @param string $url WITH leading '/'
+ * @return string
+ */
+function applicationUrl($url = '') {
+    $result = "/triaz-shopfrontend" .$url;
+    return $result;
+}
+

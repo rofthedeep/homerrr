@@ -1,0 +1,38 @@
+dev:
+    scheme: ftp
+    host: waschbaer.preview-vogel-druck.de
+    port: 21
+    user: u53179-waschbaer
+    pass: 5Mj7Rsv6ZCdx
+    check: true
+    path:
+        local: /
+        remote: /
+    include:
+        "resources/js/*" : "resources/js/"
+        "resources/css/*" : "resources/css/"
+
+stage:
+    scheme: sftp
+    host: 10.200.101.61
+    port: 22
+    user: thomas.gnandt
+    pass: vogeldruck
+    check: true
+    path:
+        local: /
+        remote: /var/www/showroom-ecommerce.softkat.de/waschbaer/
+    include:
+        "resources/js/*" : "resources/js/"
+        "resources/css/*" : "resources/css/"
+
+live:
+    scheme: ftp
+    host: ftp.my-live-server.com
+    port: 21
+    user: user
+    pass: password
+    check: true
+    path:
+        local: release/
+        remote: public_html/

@@ -1,0 +1,204 @@
+//
+// Modals
+// --------------------------------------------------
+
+// .modal-open      - body class for killing the scroll
+// .modal           - container to scroll within
+// .modal-dialog    - positioning shell for the actual modal
+// .modal-content   - actual modal w/ bg and corners and shit
+
+// Kill the scroll on the body
+.modal-open {
+    overflow: hidden;
+}
+// Triaz Customizing Start
+html {
+    //overflow: hidden;
+    //height: 100%;
+}
+body {
+    //overflow: auto;
+    //height: 100%;
+}
+
+/* unset bs3 setting */
+.modal-open {
+    overflow: auto; 
+}
+
+// Triaz Customizing End
+
+// Container that the modal scrolls within
+.modal {
+    display: none;
+    overflow: auto;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-modal;
+    -webkit-overflow-scrolling: touch;
+    //Triaz-Customizing: Set hight z-index to be higher than Dropdowns
+    z-index: 10000000;
+    // Prevent Chrome on Windows from adding a focus outline. For details, see
+    // https://github.com/twbs/bootstrap/pull/10951.
+    outline: 0;
+
+    // When fading in the modal, animate it to slide down
+    &.fade .modal-dialog {
+        .translate(0, -25%);
+        .transition-transform(~"0.3s ease-out");
+    }
+    &.in .modal-dialog { .translate(0, 0);}
+}
+
+// Shell div to position the modal with bottom padding
+.modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 10px;
+    width: 90%;
+    // Triaz Customizing
+    margin: 30px auto;
+    min-width: 720px;
+    max-width: 1024px;
+}
+
+// Actual modal
+.modal-content {
+    position: relative;
+    background-color: @modal-content-bg;
+    // Triaz-Customizing
+    //border: 1px solid @modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+    // Triaz-Customizing
+    // border: 1px solid @modal-content-border-color;
+    // Triaz-Customizing
+    //border-radius: @border-radius-large;
+    .box-shadow(0 3px 9px rgba(0,0,0,.5));
+    background-clip: padding-box;
+    // Remove focus outline from opened modal
+    outline: none;
+    // Triaz-Customizing
+    padding: @Padding;
+    // Triaz-Customizing
+    text-align: left;
+}
+
+// Modal background
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: black;
+    &.fade { .opacity(0); }
+    &.in { .opacity(0.2); }
+}
+
+// Modal header
+// Top section of the modal w/ title and dismiss
+.modal-header {
+    //padding: @modal-title-padding;
+    //Triaz-Customizing
+    //border-bottom: 1px solid @modal-header-border-color;
+    //min-height: (@modal-title-padding + @modal-title-line-height);
+    //Triaz-Customizing
+    //margin-bottom: @Margin/2;
+}
+// Close icon
+
+
+// Title text within header
+.modal-title {
+    margin: 0;
+    line-height: @modal-title-line-height;
+}
+
+// Modal body
+// Where all modal content resides (sibling of .modal-header and .modal-footer)
+.modal-body {
+    position: relative;
+    //Triaz-Customizing
+    // padding: @modal-inner-padding;
+    padding-top: 0;
+    //Triaz-Customizing
+    display: inline-block;
+    //Triaz-Customizing
+    width: 100%;
+}
+
+// Footer (for actions)
+.modal-footer {
+    margin-top: 15px;
+    padding: (@modal-inner-padding - 1) @modal-inner-padding @modal-inner-padding;
+    text-align: right; // right align buttons
+    border-top: 1px solid @modal-footer-border-color;
+    &:extend(.clearfix all); // clear it in case folks use .pull-* classes on buttons
+
+    // Properly space out buttons
+    .btn + .btn {
+        margin-left: 5px;
+        margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+    }
+    // but override that for button groups
+    .btn-group .btn + .btn {
+        margin-left: -1px;
+    }
+    // and override it for block buttons as well
+    .btn-block + .btn-block {
+        margin-left: 0;
+    }
+}
+// Scale up the modal
+@media (min-width: @screen-sm-min) {
+    // Automatically set modal's width for larger viewports
+    .modal-dialog {
+        // Triaz Customizing
+        //width: @modal-md;
+        width: 30%;
+        margin: 30px auto;
+        min-width: 768px;
+        max-width: 1024px;
+        @media @phone {
+            max-width: 90%;
+            min-width: 720px;
+            max-width: 1024px;
+        }
+        @media @tablet {
+            width: 55%;
+            min-width: 720px;
+            max-width: 1024px;
+        }
+        @media @desktop {
+            width: 40%; 
+            min-width: 720px;
+            max-width: 1024px;
+        }
+    }
+    .modal-content {
+        .box-shadow(0 5px 15px rgba(0,0,0,.5));
+    }
+
+    // Modal sizes
+    .modal-sm { 
+        width: 35%;
+        min-width: 740px;
+    }
+    .modal-lg { 
+        // Triaz Customizing    
+        @media @phone {
+            width: 90%;
+            min-width: 720px;
+            max-width: 1024px;
+        }
+        @media @tablet {
+            width: 75%;
+            min-width: 720px;
+            max-width: 1024px;
+        }
+    }
+}

@@ -1,0 +1,154 @@
+/**
+
+Description: Basic bunctions for Elements are in globals.less. All specific modul-CSS is located in separate less files.
+
+CSS Guidlines:
+
+///////////////////////////////////////
+
+Mixins: Are written with a bold character at the beginning: e.q. .FirstMixin
+
+Variables:  Are written with a bold character at the beginning: e.q. @FirstVariable
+
+Only use classes, no id's.
+
+/////////////////////////////////////
+
+**/
+
+/*------------------------------------*\
+    Resets: See also bootstrap/scaffolding.less
+\*------------------------------------*/
+
+// Get right box-modell
+
+* {
+    .box-sizing(border-box);
+}
+*:before,
+*:after {
+    .box-sizing(border-box);
+}
+
+th {
+    font-weight: normal;
+}
+
+
+dd {
+    margin-left: 0px;
+}
+
+dl {
+    margin: 0 0 @Margin 0;    
+}
+
+/*------------------------------------*\
+    Basic Styles
+\*------------------------------------*/
+
+
+body {
+    .Font1Regular;
+    .backgroundColorWhite;
+    font-size: @FontSize;
+    line-height: 18px;
+    color: @TextColor1;
+    //background-color: @Color4;
+    //background-size: cover;
+    //background-image: url('../images/bg.jpg');
+    //color: @White; 
+}
+
+
+@media print {
+    .dontPrint {
+        display: none !important;
+    }
+    button, .button {
+        display: none !important;
+    }
+    a[href]:after {
+        content: none;
+    }
+    @page {
+        size:landscape;
+    }
+}
+.inner {
+    position: relative;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+.block {
+    display: inline-block;
+    float: left;
+    width: 100%;
+}
+
+
+
+
+/*------------------------------------*\
+    aligns
+\*------------------------------------*/
+
+.alignRight {
+    float: right;
+    margin-left: @Margin/2;
+    margin-bottom: @Margin/2;
+}
+.alignLeft {
+    float: left;
+    margin-right: @Margin/2;
+    margin-bottom: @Margin/2;
+}
+.align-right {
+    text-align: right;
+}
+.align-center {
+    text-align: center;
+}
+
+
+/*------------------------------------*\
+    basic structure stylings
+\*------------------------------------*/
+.mod {
+    margin: 0;
+    padding: 0;
+}
+
+/*------------------------------------*\
+    Areas
+\*------------------------------------*/
+.area {
+    width: 100%;
+    background-color: @Color3;
+    padding: @Padding/2;
+    margin-bottom: @Margin;
+}
+
+/*------------------------------------*\
+    Navigation
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    Loader
+\*------------------------------------*/
+
+/*------------------------------------*\
+    Marketing
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    Global Styles for Buybox and Powerbox
+\*------------------------------------*/
+
