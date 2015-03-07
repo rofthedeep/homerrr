@@ -1,75 +1,37 @@
-<?php include 'pages/helpers/functions.php' ?>
-<?php include 'pages/helpers/variables.php' ?>
-
-<!DOCTYPE html>
-<head> 
-    <?php include 'pages/snippets/htmlHead.php'; ?>
-    <title><?php echo $title ?></title>
-</head>
-
-<body>
-    <div class="fullWrapper">
-        <div class="wrapper wrapperContent">
+<?php include 'initSerial.php'; ?>
+<?php include 'function.php'; ?>
+<?php include 'pages/helpers/functions.php'; ?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+    <head> 
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1"> 
+        <title>homerrr</title>
+        <?php include 'pages/snippets/htmlHead.php'; ?>  
+    </head> 
+    <body>
+        <?php include 'pages/snippets/modules/FixedNavigation.php'; ?>
+        <div class="fullWrapper">
             <div class="container">
                 <div class="row">
-                    <div class="col-xs-12 col-md-offset-2 col-md-8">
-                        <div class="mod modDescription">
-                            <div class="inner">
-                                <img src="<?php echo resourcePath('/images/tim.jpg'); ?>" alt="Tim Binder" class="profileImage"/>
+                    <div class="col-xs-12">         
+                        <div class="group">
+                            <div class="groupName">
+                                Wohnzimmer
+                            </div>
+                            <h3>Light 1</h3>
+                            <div class="btn-group" role="group">
+                                <?php echo button('on', 'Pin 11 on', 11, 255, 1, 'on'); ?>
+                                <?php echo button('off', 'Pin 11 off', 11, 0, 1, 'off'); ?>
+                            </div>
+                            <h3>Light 2</h3>
+                            <div class="btn-group" role="group">
+                                <?php echo button('on', 'Pin 12 on', 12, 255, 1, 'on'); ?>
+                                <?php echo button('off', 'Pin 12 off', 12, 0, 1, 'off'); ?>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-offset-2 col-md-8">
-                        <div class="mod modDescription">
-                            <div class="inner">
-
-                                <h1>
-                                    Hi, my name is Tim. I'm working as a freelance (Frontend)Developer and Webdesigner - ey, and I'm running a lovely <a href="https://klotzaufklotz.de">shop</a> together with Mathias.
-                                </h1>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-offset-2 col-md-4">
-                        <h3>Working with this tools and techniqes:</h3>
-                        <ul>
-                            <li>Twitter Bootstrap Grid System to build responsive frontends</li>
-                            <li>jQuery and its brothers and sisters</li>
-                            <li>Less or Sass - doesn't matter. In combination with OOCSS.</li>
-                            <li>Styleguides. Check <a href="styleGuide/index.php" title="Styleguide for E-Commerce Site" target="_blank">this</a> or <a href="https://klotzaufklotz.de/styleGuide/index.php" title="klotzaufklotz Styleguide">this</a>.</li>
-                            <li>friendly people</li>
-                            <li><a href="https://klotzaufklotz.de" title="klotzaufkotz" target="_blank">Shopware</a>, Magento and Wordpress</li>
-                            <li>HTML, CSS and Php</li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-md-4">
-                        <h3>Looking for:</h3>
-                        <ul>
-                            <li>longterm projects</li>
-                            <li>cool and fair partners</li>
-                            <li>inovative ideas</li>
-                            <li>i love building frontends for large scale ecommerce projects - but hey, I'm open for other stuff, too.</li>
-                            <li>projects where I'm able to learn something</li>
-                        </ul>
-                        <p>
-                            What I won't ever do again: A shop for pet stuff. So don't try it, okay.                
-                        </p>
-                        <a href="mailto:tim@rotd.de" class="btn primary big">Feel free to contact me!</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <?php // include 'snippets/modules/Skills.php'; ?>
                     </div>
                 </div>
             </div>
         </div>
-        <?php include 'pages/snippets/footer.php' ?>
-    </div>
-    <?php include 'pages/snippets/bodyScript.php'; ?>
-</body>
+    </body> 
 </html>

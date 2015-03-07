@@ -38,23 +38,23 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == "greenon") { 
         error_log('green on');
         //to turn the GREEN LED ON, we issue the command  
-        $serial->sendMessage('12,255');
+        $serial->sendMessage('12,255,1');
      
     } else if ($_GET['action'] == "greenoff") { 
         error_log('green of');
         //to turn the GREEN LED OFF, we issue this command 
-        $serial->sendMessage('12,0'); 
+        $serial->sendMessage('12,0,1'); 
     }
 	
 	if ($_GET['action'] == "redon") { 
              error_log('red on');
         //to turn the RED LED ON, we issue the command  
-        $serial->sendMessage('11,255'); 
+        $serial->sendMessage('11,255,1'); 
      
     } else if ($_GET['action'] == "redoff") { 
          error_log('red of');
         //to turn the RED LED OFF, we issue this command 
-        $serial->sendMessage('11,0'); 
+        $serial->sendMessage('11,0,1'); 
     } 
      
     //We're done, so close the serial port again 
