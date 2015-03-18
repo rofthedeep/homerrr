@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="<?php echo resourcePath('/css/app-min.css'); ?>" media="all">
 
 <link href='http://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700,300italic,400italic,500italic,700italic|Fira+Mono:400,700' rel='stylesheet' type='text/css'>
-
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="apple-touch-icon" sizes="57x57" href="<?php echo resourcePath('/images/favicons') ?>/apple-touch-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="<?php echo resourcePath('/images/favicons') ?>/apple-touch-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="<?php echo resourcePath('/images/favicons') ?>/apple-touch-icon-72x72.png">

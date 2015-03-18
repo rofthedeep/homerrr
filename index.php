@@ -29,9 +29,17 @@
                                 <?php echo button('off', 'Pin 12 off', 12, 0, 1, 'off'); ?>
                             </div>
                         </div>
+                        <div class="group">
+                            <div class="groupName">
+                                Schlafzimmer
+                            </div>
+                            <h3>Dimmer</h3>
+                            <?php echo dimmer('senden', 'Pin 11 on', 11, 255, 1, 'on'); ?>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+        <?php include 'pages/snippets/bodyScript.php'; ?>  
     </body> 
 </html>

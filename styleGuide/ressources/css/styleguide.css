@@ -7,6 +7,9 @@
 body {
   background-color: white;
 }
+.fullWrapper {
+  margin-top: 0px;
+}
 .chapter {
   margin-bottom: 60px;
   width: 100%;
@@ -67,7 +70,7 @@ body {
   background-color: #45b91c;
 }
 .backgroundColor2 {
-  background-color: #d24335;
+  background-color: #d9534f;
 }
 .backgroundColor3 {
   background-color: #dedede;
@@ -89,7 +92,7 @@ body {
 }
 .h5.chapterHeadline,
 h5.chapterHeadline {
-  color: #d24335;
+  color: #d9534f;
   font-size: 1.6rem;
 }
 .h4.chapterHeadline,

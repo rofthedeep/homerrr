@@ -10,4 +10,4 @@
 </div> <!-- Full Wrapper Close -->
 
 <?php
-// include 'snippets/modules/TopButton.php'; ?>
+ include 'snippets/modules/TopButton.php'; ?>

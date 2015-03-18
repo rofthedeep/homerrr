@@ -1616,21 +1616,6 @@ body {
   line-height: 18px;
   color: #000000;
 }
-@media print {
-  .dontPrint {
-    display: none !important;
-  }
-  button,
-  .button {
-    display: none !important;
-  }
-  a[href]:after {
-    content: none;
-  }
-  @page {
-    size: landscape;
-  }
-}
 .inner {
   position: relative;
 }
@@ -1644,16 +1629,18 @@ img {
   width: 100%;
 }
 /*------------------------------------*\
-    aligns
+    group
 \*------------------------------------*/
 .group {
   border: 1px solid silver;
   border-radius: 4px;
   padding-left: 15px;
+  padding-right: 15px;
   padding-top: 40px;
   position: relative;
   float: left;
   width: 100%;
+  margin-bottom: 30px;
 }
 .groupName {
   position: absolute;
@@ -1719,18 +1706,6 @@ img {
   padding: 15px;
   margin-bottom: 30px;
 }
-/*------------------------------------*\
-    Navigation
-\*------------------------------------*/
-/*------------------------------------*\
-    Loader
-\*------------------------------------*/
-/*------------------------------------*\
-    Marketing
-\*------------------------------------*/
-/*------------------------------------*\
-    Global Styles for Buybox and Powerbox
-\*------------------------------------*/
 img {
   -ms-interpolation-mode: bicubic;
 }
@@ -1927,11 +1902,13 @@ embed {
   vertical-align: middle;
   white-space: nowrap;
   border: 0px none;
+  position: relative;
 }
 .btn:hover {
   cursor: pointer;
 }
-.btn.on {
+.btn.on,
+.btn.primary {
   padding: 8px 12px 8px 12px;
   background-color: #45b91c;
   color: #ffffff;
@@ -1939,12 +1916,14 @@ embed {
   font-weight: 700;
   border-radius: 4px;
 }
-.btn.on:hover {
+.btn.on:hover,
+.btn.primary:hover {
   color: #ffffff;
   background-color: #555555;
   border-color: #555555;
 }
-.btn.off {
+.btn.off,
+.btn.secondary {
   padding: 8px 12px 8px 12px;
   background-color: #d9534f;
   color: #ffffff;
@@ -1952,19 +1931,7 @@ embed {
   font-weight: 700;
   border-radius: 4px;
 }
-.btn.off:hover {
-  color: #ffffff;
-  background-color: #555555;
-  border-color: #555555;
-}
-.btn.secondary {
-  padding: 6px 12px 4px 12px;
-  background-color: #d24335;
-  color: #ffffff;
-  text-decoration: none;
-  border: 2px solid #d24335;
-  font-weight: 700;
-}
+.btn.off:hover,
 .btn.secondary:hover {
   color: #ffffff;
   background-color: #555555;
@@ -1999,6 +1966,25 @@ embed {
 }
 .btn.conversion {
   width: 300px;
+}
+.btn .loaderIcon {
+  display: none;
+}
+.btn.loader {
+  padding-right: 30px;
+}
+.btn.loader .loaderIcon {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  margin-top: 2px;
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0yNTUgMjU3IDUxMiA1MTIiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgLTI1NSAyNTcgNTEyIDUxMiI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTS0yMDQgNDkzYzkuNC05Ny44IDg3LjItMTc1LjYgMTg1LTE4NXY0MC4yYy0zNi44IDQuNC03MC44IDIwLjgtOTcuNCA0Ny40cy00MyA2MC42LTQ3LjQgOTcuNGgtNDAuMnptMjI1LTE0NC44YzM2LjggNC40IDcwLjggMjAuOCA5Ny40IDQ3LjRzNDMgNjAuNiA0Ny40IDk3LjRoNDAuMmMtOS40LTk3LjgtODcuMi0xNzUuNi0xODUtMTg1djQwLjJ6bS00MCAzMjkuNmMtMzYuOC00LjQtNzAuOC0yMC44LTk3LjQtNDcuNC0yNi42LTI2LjYtNDMtNjAuNi00Ny40LTk3LjRoLTQwLjJjOS40IDk3LjggODcuMiAxNzUuNiAxODUgMTg1di00MC4yem0xODQuOC0xNDQuOGMtNC40IDM2LjgtMjAuOCA3MC44LTQ3LjQgOTcuNC0yNi42IDI2LjYtNjAuNiA0My05Ny40IDQ3LjR2NDAuMmM5Ny44LTkuNCAxNzUuNi04Ny4yIDE4NS0xODVoLTQwLjJ6Ii8+PC9zdmc+);
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
 }
 a.button {
   text-decoration: none;
@@ -2847,7 +2833,7 @@ label.disabled {
   background-color: #45b91c;
 }
 .backgroundColor2 {
-  background-color: #d24335;
+  background-color: #d9534f;
 }
 .backgroundColor3 {
   background-color: #dedede;
@@ -2883,7 +2869,7 @@ label.disabled {
   color: #45b91c;
 }
 .color2 {
-  color: #d24335;
+  color: #d9534f;
 }
 .color3 {
   color: #dedede;

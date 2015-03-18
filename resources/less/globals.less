@@ -54,27 +54,8 @@ body {
     font-size: @FontSize;
     line-height: 18px;
     color: @TextColor1;
-    //background-color: @Color4;
-    //background-size: cover;
-    //background-image: url('../images/bg.jpg');
-    //color: @White; 
 }
 
-
-@media print {
-    .dontPrint {
-        display: none !important;
-    }
-    button, .button {
-        display: none !important;
-    }
-    a[href]:after {
-        content: none;
-    }
-    @page {
-        size:landscape;
-    }
-}
 .inner {
     position: relative;
 }
@@ -90,18 +71,19 @@ img {
 }
 
 /*------------------------------------*\
-    aligns
+    group
 \*------------------------------------*/
 
 .group {
     border: 1px solid silver;
     border-radius: 4px;
     padding-left: @Padding/2;
-    padding-left: @Padding/2;
+    padding-right: @Padding/2;
     padding-top: 40px;
     position: relative;
     float: left;
     width: 100%;
+    margin-bottom: @Margin;
 }
 .groupName {
     position: absolute;
@@ -149,10 +131,10 @@ img {
     text-align: center;
 }
 
-
 /*------------------------------------*\
     basic structure stylings
 \*------------------------------------*/
+
 .mod {
     margin: 0;
     padding: 0;
@@ -161,30 +143,10 @@ img {
 /*------------------------------------*\
     Areas
 \*------------------------------------*/
+
 .area {
     width: 100%;
     background-color: @Color3;
     padding: @Padding/2;
     margin-bottom: @Margin;
 }
-
-/*------------------------------------*\
-    Navigation
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-    Loader
-\*------------------------------------*/
-
-/*------------------------------------*\
-    Marketing
-\*------------------------------------*/
-
-
-
-/*------------------------------------*\
-    Global Styles for Buybox and Powerbox
-\*------------------------------------*/
-
