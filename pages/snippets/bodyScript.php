@@ -1,5 +1,5 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<!--<script src="<?php echo resourcePath('/js/homerrr.js'); ?>"></script> -->
+<script src="<?php echo resourcePath('/js/homerrr.js'); ?>"></script>
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
