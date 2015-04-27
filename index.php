@@ -34,7 +34,8 @@
                                 Schlafzimmer
                             </div>
                             <h3>Dimmer</h3>
-                            <?php echo dimmer('senden', 'Pin 11 on', 11, 255, 1, 'on'); ?>
+                            <?php echo dimmer('senden 11', 'Pin 11 on', 11, 255, 1, 'on'); ?>
+                            <?php echo dimmer('senden 12', 'Pin 11 on', 12, 255, 1, 'on'); ?>
                         </div>
                     </div>
                 </div>

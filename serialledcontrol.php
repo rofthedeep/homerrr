@@ -24,7 +24,7 @@ if (isset($_GET['action'])) {
     $serial->deviceSet("/dev/cu.usbmodem1421"); //SET THIS TO WHATEVER YOUR SERIAL DEVICE HAPPENS TO BE, YOU CAN FIND THIS UNDER THE ARDUINO SOFTWARE'S MENU
      
     //Set the serial port parameters. The documentation says 9600 8-N-1, so 
-    $serial->confBaudRate(115200); //Baud rate: 9600 
+    $serial->confBaudRate(9600); //Baud rate: 9600 
    // $serial->confParity("none");  //Parity (this is the "N" in "8-N-1") ******THIS PART OF THE CODE WAS NOT NEEDED
   // $serial->confCharacterLength(8); //Character length (this is the "8" in "8-N-1") ******THIS PART OF THE CODE WAS NOT NEEDED
    // $serial->confStopBits(1);  //Stop bits (this is the "1" in "8-N-1") ******THIS PART OF THE CODE WAS NOT NEEDED
