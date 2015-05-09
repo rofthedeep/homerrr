@@ -4,7 +4,10 @@
 //Load the serial port class 
 require("php_serial.class.php");
 $serial = new phpSerial();
+// for mac
 $serial->deviceSet("/dev/cu.usbmodem1421");
+// for rasperry
+$serial->deviceSet("/dev/ttyACMO");
 $serial->confBaudRate(9600);
 $serial->deviceOpen();
 usleep(200000);
