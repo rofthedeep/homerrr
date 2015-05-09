@@ -6,7 +6,10 @@
  void setup() {
  
    Serial.begin(9600); // initialize serial communication
-   Serial.setTimeout(100);
+   while (!Serial) {
+    ; // wait for serial port to connect. Needed for Leonardo only
+  }
+   //Serial.setTimeout(100);
  }
  void loop() {
    // see if there's incoming serial data:
@@ -15,11 +18,11 @@
     //Serial.println(fullValue);
     pin = Serial.parseInt();
     //pin = Serial.read();
-    Serial.println(pin);
+    //Serial.println(pin);
     value = Serial.parseInt();
-    Serial.println(value);
+    //Serial.println(value);
     inorout = Serial.parseInt();
-    Serial.println(inorout);
+    //Serial.println(inorout);
     if(inorout == 1) {
       pinMode(pin, OUTPUT);
       analogWrite(pin,value);
@@ -38,4 +41,5 @@
   }
 
    }
+
 
