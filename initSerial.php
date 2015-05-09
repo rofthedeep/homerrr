@@ -7,9 +7,10 @@ $serial = new phpSerial();
 // for mac
 $serial->deviceSet("/dev/cu.usbmodem1421");
 // for rasperry
-$serial->deviceSet("/dev/ttyACMO");
+//$serial->deviceSet("/dev/ttyACMO");
 $serial->confBaudRate(9600);
 $serial->deviceOpen();
+// add the sleep to wait until the connection is realy open
 usleep(200000);
 $pin = $_GET['pin'];
 $value = $_GET['value'];
