@@ -28,6 +28,10 @@ find the right serial port with the arduino ide.  At the bottom right is written
 port your arduino is connected. In my case it was "/dev/cu.usbmodem1421" for mac and "/dev/ttyACMO" for my raspery.
 This connection must be set in the "initSerial.php" file in $serial->deviceSet. Look at the examples there.
 
+The command for chmod is sudo chmod -R 777 ttyACM0
+
+To set the chmod on every startup (because the tty files are created new), use paste this Code "chmod a+rw /dev/ttyACM0" to your /etc/rc.local file. Attention: This works for me. But I don't know if this cuases security issues. So dont't use this in critical environments.
+
 ### Push code on the arduino
 Use the arduino software to push the code (arduino/arduino_homerrr/arduino_homerrr.ino) on the arduino. 
 
