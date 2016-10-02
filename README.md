@@ -1,9 +1,9 @@
 # homerrr
-home automation with php
-<img src="https://raw.githubusercontent.com/rofthedeep/homerrr/master/screenshot.png" width="500" height="653" alt="php home automation"/>
+## home automation with php
 
+<a href="https://youtu.be/i2PyvJRrnG0" target="_blank"><img src="https://raw.githubusercontent.com/rofthedeep/homerrr/master/screenshot-youtube.png" alt="php home automation"/></a>
 
-With homerrr you can create your own php based homeautomation system. For the communication beween the webserver and the arduino
+With homerrr you can create your own php based home automation system. For the communication beween the webserver and the arduino
 the [php_serial.class.php](http://code.google.com/p/php-serial/) is used.
 
 Why another solution? I didn't get the other work :-)
@@ -19,6 +19,8 @@ So, you can take your light on and of, or even dimm it.
 You have to install a local webserver with php. 
 For OSX you can use http://www.mamp.info/de/ or the build in server
 For Rasperry Pi look at this tutorial http://www.raspberrypi.org/documentation/remote-access/web-server/apache.md
+
+<img src="https://raw.githubusercontent.com/rofthedeep/homerrr/master/screenshot.png" width="500" height="653" alt="php home automation"/>
 
 ### Clone repository and open site in webbrowser
 
