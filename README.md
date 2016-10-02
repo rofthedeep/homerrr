@@ -1,6 +1,7 @@
 # homerrr
 home automation with php
-![php home automation](https://raw.githubusercontent.com/rofthedeep/homerrr/master/screenshot.png =500x653)
+<img src="https://raw.githubusercontent.com/rofthedeep/homerrr/master/screenshot.png" width="500" height="653" alt="php home automation"/>
+
 
 With homerrr you can create your own php based homeautomation system. For the communication beween the webserver and the arduino
 the [php_serial.class.php](http://code.google.com/p/php-serial/) is used.
